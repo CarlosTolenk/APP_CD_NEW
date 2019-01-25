@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { View, StyleSheet, Dimensions, ScrollView } from 'react-native';
+import { View, StyleSheet, Dimensions, ScrollView, TouchableWithoutFeedback } from 'react-native';
 import { TabView, TabBar, SceneMap } from 'react-native-tab-view';
 
 //Component
@@ -7,11 +7,20 @@ import Planes from '../containers/planes-list';
 import Eventos from '../containers/eventos-list';
 import Slider from '../containers/promo';
 import Anuncio from '../containers/anuncios';
+import BannerLo from './banner';
+
+
+const { height, width } = Dimensions.get('window');
 
 const FirstRoute = () => (
 
-  <ScrollView style={styles.colorPage}>  
-     <Anuncio/>
+  <ScrollView style={styles.container}>    
+      <ScrollView style={styles.anuncios}>
+        <Anuncio/>
+      </ScrollView>
+      <View style={styles.banner} >
+         <BannerLo/>
+      </View> 
   </ScrollView>
 
 );
@@ -58,16 +67,27 @@ export default class TabViewExample extends React.Component {
 
 const styles = StyleSheet.create({
     container:{
-        flex:1,       
+        flex:1,     
+        // height: height , 
+        // width: Dimensions.get('window').width,        
     },
     containerItem:{
         width: Dimensions.get('window').width,   
     },
     colorPage:{
       backgroundColor:"white"
+    },
+    anuncios:{
+      flex: 2,
+      width: width,    
+    },
+    banner:{
+      flex: 1,  
+      justifyContent: 'flex-end',
+     
+    
     }
 })
-
 
 
 

@@ -1,18 +1,21 @@
 import React, {Component} from 'react'
-import { View, TextInput, StyleSheet, Text, Dimensions, Image, Animated } from 'react-native';
+import { View, TextInput, StyleSheet, Text, Dimensions, Image, Animated, TouchableWithoutFeedback } from 'react-native';
 
 //Plugin
 import {connect} from 'react-redux'
 import CardView from 'react-native-cardview';
 //Component
 import Diamond from '../../section/components/diamando-large';
+import BannerLottery from '../../section/containers/banner';
 
 //Const
 const {width, height} = Dimensions.get('window');
 
 const styles = StyleSheet.create({
-    container:{
-        flex:1,
+    container:{   
+        flex: 1,          
+        height: height/1.35
+
     },
     jaladera:{
         height: height/3.5,
@@ -41,13 +44,20 @@ const styles = StyleSheet.create({
          color: '#EF1010',        
     },
     diamond:{
-        flex:2,
+        flex:1,
         flexDirection: 'row',
         justifyContent: 'space-around',
         alignContent: 'center',
     },
     controls:{
-        flex:1
+        flex:1,
+        height: height/10,
+    },
+    banner:{      
+        flex:1,       
+        justifyContent: 'flex-end',
+        width: width,  
+         
     },
     corteciaJaladera:{
         flex:1,
@@ -235,6 +245,17 @@ class Jaladera extends Component{
 
                     />
                 </View>
+
+
+                <View style={styles.banner}>
+      
+                    <TouchableWithoutFeedback                    
+                        onPress={() => this.onBannerPress()}
+                        >
+                        <BannerLottery />
+                    </TouchableWithoutFeedback>
+                </View>
+        
                 
             </View>
         )

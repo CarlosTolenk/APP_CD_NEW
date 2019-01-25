@@ -21,6 +21,7 @@ import Orientation from 'react-native-orientation';
 import CloseModalX from '../../section/components/closeModal';
 import Alerta from './alertas'; 
 
+
 // const { width, height } = Dimensions.get( "window" );
 // const width = 0;
 let columnWidth = 0;
@@ -174,7 +175,8 @@ class Anuncios extends Component {
 					
 				</View>
 				
-				</TouchableOpacity>					
+				</TouchableOpacity>	
+								
 			</View>		
 				
 			
@@ -205,12 +207,8 @@ class Anuncios extends Component {
 					<CloseModalX close={this.closeModal} />
 					}
 			</Modal>
-		
-		
-
-	
               
-     
+	
 		</View>
 	}
 }

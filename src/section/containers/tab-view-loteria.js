@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { View, StyleSheet, Dimensions, ScrollView, BackHandler, Text } from 'react-native';
+import { View, StyleSheet, Dimensions, ScrollView, BackHandler, Text, TouchableWithoutFeedback } from 'react-native';
 
 //Plugin
 import { TabView, TabBar, SceneMap } from 'react-native-tab-view';
@@ -12,6 +12,7 @@ import { connect } from 'react-redux';
 import Loteria from '../../screens/containers/loteria'
 import Anuncio from '../containers/anuncios';
 import Jaladera from '../../screens/containers/jaladera';
+
 
 
 

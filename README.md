@@ -14,7 +14,6 @@ cd android ./gradlew clean
 
 
 
-
 ##Limpiar el proyecto de ANDROID
 cd android && ./gradlew clean
 
@@ -26,6 +25,13 @@ cd android && ./gradlew assembleRelease
 ##Compilar todas los assets
 react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index --assets-dest android/app/src/main/res
 
+
+##Compilar todos los assets NUEVO
+react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res
+
+
+##Probar aplicación Firmada
+ react-native run-android --variant=release
 
 
 

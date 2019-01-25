@@ -1,7 +1,7 @@
 import React, {Component}  from 'react';
 import {
     FlatList,
-    View, Text, StyleSheet, Dimensions, AsyncStorage
+    View, Text, StyleSheet, Dimensions, AsyncStorage, TouchableWithoutFeedback
 } from 'react-native';
 
 //Libray o Plugin
@@ -14,6 +14,8 @@ import Empty from '../components/empty';
 import Separador from '../components/separator';
 import ItemLoteria from './item-loteria';
 import DiamondLotery from '../components/diamond';
+import BannerLottery from './banner';
+import ModalPublicidadLottery from './modalpublicidad';
 
 const { height, width } = Dimensions.get('window');
 
@@ -232,9 +234,14 @@ class LoteriasList extends Component{
                 ListEmptyComponent = {this.renderEmtpy}
                 ItemSeparatorComponent = {this.itemSeparator}
                 renderItem = {this.renderItem}
-                key={Math.random().toString()}
-               
+                key={Math.random().toString()}               
            />   
+            <ModalPublicidadLottery/>
+            <TouchableWithoutFeedback
+                 onPress={() => this.onBannerPress()}
+                 >
+                <BannerLottery />
+             </TouchableWithoutFeedback>
        </View>   
         )
     }
