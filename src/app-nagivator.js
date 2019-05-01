@@ -13,6 +13,7 @@ import Evento from './screens/containers/detail-item-evento';
 import CanalTv from './screens/containers/canal';
 import Player from './screens/containers/video-container';
 import Radio from './screens/containers/radio';
+import RadioTube from './screens/containers/radioTube';
 import Contactos from './screens/containers/contactos';
 import Website from './screens/containers/website';
 import Formulario from './screens/containers/formulario';
@@ -74,7 +75,7 @@ const TabNavigator = createBottomTabNavigator(
             }
         },
         Radio:{
-            screen: Radio,
+            screen: RadioTube,
             navigationOptions:{
                 title: 'Radio',             
                 tabBarIcon: ({tintColor}) => <Icon name="radio" size={25} color={tintColor} />,

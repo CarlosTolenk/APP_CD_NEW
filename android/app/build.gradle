@@ -123,8 +123,8 @@ android {
     applicationId "cdiamante.controldiamante.com"
     minSdkVersion rootProject.ext.minSdkVersion
     targetSdkVersion rootProject.ext.targetSdkVersion
-    versionCode 17
-    versionName "2.6"
+    versionCode 20
+    versionName "2.6.1"
     ndk {
       abiFilters "armeabi-v7a", "x86"
     }

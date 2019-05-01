@@ -15,10 +15,10 @@ firebase.admob().initialize('ca-app-pub-1434471372859851~3707343740');
 const {width, height} = Dimensions.get('window');
 
 //Controldiamante
-// const advert = firebase.admob().interstitial('ca-app-pub-1434471372859851/9419661426');
+const advert = firebase.admob().interstitial('ca-app-pub-1434471372859851/8527190075');
 
 //Google
-const advert = firebase.admob().interstitial('ca-app-pub-3940256099942544/1033173712');
+// const advert = firebase.admob().interstitial('ca-app-pub-3940256099942544/1033173712');
 
 const AdRequest = firebase.admob.AdRequest;
 const request = new AdRequest();

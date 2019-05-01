@@ -14,6 +14,14 @@ firebase.admob().initialize('ca-app-pub-1434471372859851~3707343740');
 //Const
 const {width, height} = Dimensions.get('window');
 
+
+//Elie
+// unitId={"ca-app-pub-1325404563457505~8790079807"}
+
+//Google
+// unitId={"ca-app-pub-3940256099942544/2934735716"}
+
+
 //Controldiamante
 // const advert = firebase.admob().interstitial('ca-app-pub-1434471372859851/9419661426');
 
@@ -39,10 +47,12 @@ class BannerLottery extends Component{
         return(
             <View style={styles.container}>
                 <Banner
-                //ca-app-pub-3940256099942544/2934735716 googlge
-                unitId={"ca-app-pub-3940256099942544/2934735716"}
+             
 
-                // unitId={"ca-app-pub-1434471372859851/7608010017"}
+                //Yo
+                unitId={"ca-app-pub-1434471372859851/3734152100"}
+
+               
                 size={"SMART_BANNER"}
                 request={request.build()}
                 onAdFailedToLoad={(err)=> console.log(err)}

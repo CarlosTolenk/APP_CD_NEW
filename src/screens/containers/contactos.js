@@ -247,7 +247,7 @@ class Contactos extends Component {
                 </View>
                 <View style={styles.callButton}>
                   <CallButton
-                      url={'tel:8096267885'}
+                      url={'tel:8093756455'}
 
 
                     />                    
